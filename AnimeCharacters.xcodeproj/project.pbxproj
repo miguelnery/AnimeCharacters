@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2571A48624A70862000B167F /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2571A48524A70862000B167F /* Character.swift */; };
+		2571A48A24A7095C000B167F /* URL+CharacterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2571A48924A7095C000B167F /* URL+CharacterAPI.swift */; };
 		ACFB180D24A67E390084F04F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFB180C24A67E390084F04F /* AppDelegate.swift */; };
 		ACFB180F24A67E390084F04F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFB180E24A67E390084F04F /* SceneDelegate.swift */; };
 		ACFB181124A67E390084F04F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFB181024A67E390084F04F /* ViewController.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2571A48524A70862000B167F /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		2571A48924A7095C000B167F /* URL+CharacterAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+CharacterAPI.swift"; sourceTree = "<group>"; };
 		ACFB180924A67E390084F04F /* AnimeCharacters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimeCharacters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACFB180C24A67E390084F04F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACFB180E24A67E390084F04F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +68,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2571A48424A70854000B167F /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				2571A48824A7093C000B167F /* Network */,
+				2571A48524A70862000B167F /* Character.swift */,
+			);
+			path = Character;
+			sourceTree = "<group>";
+		};
+		2571A48724A70919000B167F /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				ACFB183024A67FF60084F04F /* Network */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		2571A48824A7093C000B167F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2571A48924A7095C000B167F /* URL+CharacterAPI.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		ACFB180024A67E390084F04F = {
 			isa = PBXGroup;
 			children = (
@@ -86,7 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				ACFB183124A680020084F04F /* App */,
-				ACFB183024A67FF60084F04F /* Network */,
+				2571A48424A70854000B167F /* Character */,
+				2571A48724A70919000B167F /* Commons */,
 				ACFB181024A67E390084F04F /* ViewController.swift */,
 			);
 			path = AnimeCharacters;
@@ -243,7 +273,9 @@
 				ACFB181124A67E390084F04F /* ViewController.swift in Sources */,
 				ACFB183324A680660084F04F /* DecodableFetcher.swift in Sources */,
 				ACFB180D24A67E390084F04F /* AppDelegate.swift in Sources */,
+				2571A48624A70862000B167F /* Character.swift in Sources */,
 				ACFB180F24A67E390084F04F /* SceneDelegate.swift in Sources */,
+				2571A48A24A7095C000B167F /* URL+CharacterAPI.swift in Sources */,
 				ACFB182F24A67EA20084F04F /* DataFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
