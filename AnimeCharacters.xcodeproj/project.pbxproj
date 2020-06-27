@@ -10,7 +10,6 @@
 		ACFB180D24A67E390084F04F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFB180C24A67E390084F04F /* AppDelegate.swift */; };
 		ACFB180F24A67E390084F04F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFB180E24A67E390084F04F /* SceneDelegate.swift */; };
 		ACFB181124A67E390084F04F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFB181024A67E390084F04F /* ViewController.swift */; };
-		ACFB181424A67E390084F04F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACFB181224A67E390084F04F /* Main.storyboard */; };
 		ACFB181624A67E3A0084F04F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACFB181524A67E3A0084F04F /* Assets.xcassets */; };
 		ACFB181924A67E3A0084F04F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACFB181724A67E3A0084F04F /* LaunchScreen.storyboard */; };
 		ACFB182424A67E3A0084F04F /* AnimeCharactersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFB182324A67E3A0084F04F /* AnimeCharactersTests.swift */; };
@@ -35,7 +34,6 @@
 		ACFB180C24A67E390084F04F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACFB180E24A67E390084F04F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		ACFB181024A67E390084F04F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ACFB181324A67E390084F04F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ACFB181524A67E3A0084F04F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACFB181824A67E3A0084F04F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACFB181A24A67E3A0084F04F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,7 +88,6 @@
 				ACFB183124A680020084F04F /* App */,
 				ACFB183024A67FF60084F04F /* Network */,
 				ACFB181024A67E390084F04F /* ViewController.swift */,
-				ACFB181224A67E390084F04F /* Main.storyboard */,
 			);
 			path = AnimeCharacters;
 			sourceTree = "<group>";
@@ -226,7 +223,6 @@
 			files = (
 				ACFB181924A67E3A0084F04F /* LaunchScreen.storyboard in Resources */,
 				ACFB181624A67E3A0084F04F /* Assets.xcassets in Resources */,
-				ACFB181424A67E390084F04F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,14 +269,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		ACFB181224A67E390084F04F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ACFB181324A67E390084F04F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ACFB181724A67E3A0084F04F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
