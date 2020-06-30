@@ -10,8 +10,14 @@
 		25221F8024A7B861007F263E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 25221F7F24A7B861007F263E /* SnapKit */; };
 		25221F8224A7BB32007F263E /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25221F8124A7BB32007F263E /* ViewCode.swift */; };
 		25221F8724A7C012007F263E /* DisplayDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25221F8624A7C012007F263E /* DisplayDescriptionView.swift */; };
+		25309F7F24A86BDC0043F433 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 25309F7E24A86BDC0043F433 /* SnapshotTesting */; };
 		2571A48624A70862000B167F /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2571A48524A70862000B167F /* Character.swift */; };
 		2571A48A24A7095C000B167F /* URL+CharacterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2571A48924A7095C000B167F /* URL+CharacterAPI.swift */; };
+		25D3E59424AA7BAA00F3400F /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D3E59324AA7BAA00F3400F /* ButtonView.swift */; };
+		25D3E59724AA7F9800F3400F /* UIControl+eventPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D3E59624AA7F9800F3400F /* UIControl+eventPublisher.swift */; };
+		25D3E59A24ABFF9B00F3400F /* DisplayDescriptionViewTypeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D3E59924ABFF9B00F3400F /* DisplayDescriptionViewTypeMock.swift */; };
+		25F559D624A867A600524001 /* DisplayDescriptionViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F559D524A867A600524001 /* DisplayDescriptionViewControllerTests.swift */; };
+		25F559D824A8684100524001 /* DecodableFetcherMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F559D724A8684100524001 /* DecodableFetcherMock.swift */; };
 		ACFB180D24A67E390084F04F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFB180C24A67E390084F04F /* AppDelegate.swift */; };
 		ACFB180F24A67E390084F04F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFB180E24A67E390084F04F /* SceneDelegate.swift */; };
 		ACFB181124A67E390084F04F /* DisplayDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFB181024A67E390084F04F /* DisplayDescriptionViewController.swift */; };
@@ -38,6 +44,11 @@
 		25221F8624A7C012007F263E /* DisplayDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayDescriptionView.swift; sourceTree = "<group>"; };
 		2571A48524A70862000B167F /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		2571A48924A7095C000B167F /* URL+CharacterAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+CharacterAPI.swift"; sourceTree = "<group>"; };
+		25D3E59324AA7BAA00F3400F /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		25D3E59624AA7F9800F3400F /* UIControl+eventPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+eventPublisher.swift"; sourceTree = "<group>"; };
+		25D3E59924ABFF9B00F3400F /* DisplayDescriptionViewTypeMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayDescriptionViewTypeMock.swift; sourceTree = "<group>"; };
+		25F559D524A867A600524001 /* DisplayDescriptionViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayDescriptionViewControllerTests.swift; sourceTree = "<group>"; };
+		25F559D724A8684100524001 /* DecodableFetcherMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableFetcherMock.swift; sourceTree = "<group>"; };
 		ACFB180924A67E390084F04F /* AnimeCharacters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimeCharacters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACFB180C24A67E390084F04F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACFB180E24A67E390084F04F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25309F7F24A86BDC0043F433 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +121,8 @@
 		2571A48724A70919000B167F /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				25D3E59524AA7ECA00F3400F /* Combine */,
+				25D3E59224A9885500F3400F /* Views */,
 				ACFB183024A67FF60084F04F /* Network */,
 				25221F8124A7BB32007F263E /* ViewCode.swift */,
 			);
@@ -121,6 +135,47 @@
 				2571A48924A7095C000B167F /* URL+CharacterAPI.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		25D3E59224A9885500F3400F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				25D3E59324AA7BAA00F3400F /* ButtonView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		25D3E59524AA7ECA00F3400F /* Combine */ = {
+			isa = PBXGroup;
+			children = (
+				25D3E59624AA7F9800F3400F /* UIControl+eventPublisher.swift */,
+			);
+			path = Combine;
+			sourceTree = "<group>";
+		};
+		25D3E59824ABFE7D00F3400F /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				25D3E59924ABFF9B00F3400F /* DisplayDescriptionViewTypeMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		25F559D024A8674400524001 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				25D3E59824ABFE7D00F3400F /* Mocks */,
+				25F559D124A8675700524001 /* DisplayDescription */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		25F559D124A8675700524001 /* DisplayDescription */ = {
+			isa = PBXGroup;
+			children = (
+				25F559D524A867A600524001 /* DisplayDescriptionViewControllerTests.swift */,
+			);
+			path = DisplayDescription;
 			sourceTree = "<group>";
 		};
 		ACFB180024A67E390084F04F = {
@@ -155,6 +210,7 @@
 		ACFB182224A67E3A0084F04F /* AnimeCharactersTests */ = {
 			isa = PBXGroup;
 			children = (
+				25F559D024A8674400524001 /* Screens */,
 				ACFB183424A686790084F04F /* Network */,
 				ACFB182524A67E3B0084F04F /* Info.plist */,
 			);
@@ -195,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				ACFB183924A686F30084F04F /* DataFetcherMock.swift */,
+				25F559D724A8684100524001 /* DecodableFetcherMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -236,6 +293,9 @@
 				ACFB182124A67E3A0084F04F /* PBXTargetDependency */,
 			);
 			name = AnimeCharactersTests;
+			packageProductDependencies = (
+				25309F7E24A86BDC0043F433 /* SnapshotTesting */,
+			);
 			productName = AnimeCharactersTests;
 			productReference = ACFB181F24A67E3A0084F04F /* AnimeCharactersTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -270,6 +330,7 @@
 			mainGroup = ACFB180024A67E390084F04F;
 			packageReferences = (
 				25221F7E24A7B861007F263E /* XCRemoteSwiftPackageReference "SnapKit" */,
+				25309F7D24A86BDC0043F433 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
 			);
 			productRefGroup = ACFB180A24A67E390084F04F /* Products */;
 			projectDirPath = "";
@@ -307,7 +368,9 @@
 			files = (
 				25221F8724A7C012007F263E /* DisplayDescriptionView.swift in Sources */,
 				ACFB181124A67E390084F04F /* DisplayDescriptionViewController.swift in Sources */,
+				25D3E59424AA7BAA00F3400F /* ButtonView.swift in Sources */,
 				ACFB183324A680660084F04F /* DecodableFetcher.swift in Sources */,
+				25D3E59724AA7F9800F3400F /* UIControl+eventPublisher.swift in Sources */,
 				ACFB180D24A67E390084F04F /* AppDelegate.swift in Sources */,
 				2571A48624A70862000B167F /* Character.swift in Sources */,
 				ACFB180F24A67E390084F04F /* SceneDelegate.swift in Sources */,
@@ -323,6 +386,9 @@
 			files = (
 				ACFB183A24A686F30084F04F /* DataFetcherMock.swift in Sources */,
 				ACFB183624A686C50084F04F /* DefaultDecodableFetcherTests.swift in Sources */,
+				25F559D624A867A600524001 /* DisplayDescriptionViewControllerTests.swift in Sources */,
+				25F559D824A8684100524001 /* DecodableFetcherMock.swift in Sources */,
+				25D3E59A24ABFF9B00F3400F /* DisplayDescriptionViewTypeMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +649,14 @@
 				minimumVersion = 5.0.1;
 			};
 		};
+		25309F7D24A86BDC0043F433 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.8.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -590,6 +664,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 25221F7E24A7B861007F263E /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		25309F7E24A86BDC0043F433 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25309F7D24A86BDC0043F433 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

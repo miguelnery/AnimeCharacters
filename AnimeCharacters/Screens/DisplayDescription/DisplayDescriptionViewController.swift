@@ -3,12 +3,14 @@ import SnapKit
 import Combine
 
 class DisplayDescriptionViewController: UIViewController {
-    private let displayDescriptionView = DisplayDescriptionView(frame: .zero)
+    private let displayDescriptionView: DisplayDescriptionViewType
     private let decodableFetcher: DecodableFetcher
     private var sub: AnyCancellable?
     
-    init(decodableFetcher: DecodableFetcher = DefaultDecodableFetcher()) {
+    init(decodableFetcher: DecodableFetcher = DefaultDecodableFetcher(),
+         view: DisplayDescriptionViewType = DisplayDescriptionView(frame: .zero)) {
         self.decodableFetcher = decodableFetcher
+        displayDescriptionView = view
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -32,7 +34,7 @@ class DisplayDescriptionViewController: UIViewController {
         .sink(receiveCompletion: { completion in
             if case .failure(let error) = completion { print(error) }
         }, receiveValue: { description in
-            self.displayDescriptionView.characterDescription = description
+            self.displayDescriptionView.setDescription(text: description)
         })
     }
 }
