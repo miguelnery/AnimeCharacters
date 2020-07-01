@@ -1,4 +1,9 @@
 import UIKit
+import Combine
+
+protocol ButtonViewType: UIView {
+    func publisher(forEvent event: UIControl.Event) -> AnyPublisher<Void, Never>
+}
 
 class ButtonView: UIView {
     private let button = UIButton(frame: .zero)
@@ -12,6 +17,12 @@ class ButtonView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 }
+ 
+extension ButtonView: ButtonViewType {
+    func publisher(forEvent event: UIControl.Event) -> AnyPublisher<Void, Never> {
+        button.publisher(forEvent: event)
+    }
+}
 
 extension ButtonView: ViewCode {
     func addViews() {
@@ -21,10 +32,13 @@ extension ButtonView: ViewCode {
     func addConstraints() {
         button.snp.makeConstraints {
             $0.center.equalToSuperview()
+            $0.width.equalTo(50)
+            $0.height.equalTo(25)
         }
     }
     
     func additionalSetup() {
         backgroundColor = .white
+        button.backgroundColor = .cyan
     }
 }
