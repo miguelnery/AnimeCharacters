@@ -1,10 +1,10 @@
 import UIKit
 
-protocol DisplayDescriptionViewType: UIView {
+protocol DescriptionViewType: UIView {
     func setDescription(text: String)
 }
 
-class DisplayDescriptionView: UIView {
+class DescriptionView: UIView {
     
     private let descriptionLabel = UILabel()
     
@@ -19,7 +19,7 @@ class DisplayDescriptionView: UIView {
     }
 }
 
-extension DisplayDescriptionView: DisplayDescriptionViewType {
+extension DescriptionView: DescriptionViewType {
     func setDescription(text: String) {
         DispatchQueue.main.async {
             self.descriptionLabel.text = text
@@ -27,7 +27,7 @@ extension DisplayDescriptionView: DisplayDescriptionViewType {
     }
 }
 
-extension DisplayDescriptionView: ViewCode {
+extension DescriptionView: ViewCode {
     func addViews() {
         addSubview(descriptionLabel)
     }

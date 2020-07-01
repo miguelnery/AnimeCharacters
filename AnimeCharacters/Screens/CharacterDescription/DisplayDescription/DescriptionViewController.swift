@@ -2,10 +2,10 @@ import UIKit
 import SnapKit
 import Combine
 
-class DisplayDescriptionViewController: UIViewController {
-    private let displayDescriptionView: DisplayDescriptionViewType
+class DescriptionViewController: UIViewController {
+    private let displayDescriptionView: DescriptionViewType
     
-    init(description: String, view: DisplayDescriptionViewType = DisplayDescriptionView(frame: .zero)) {
+    init(description: String, view: DescriptionViewType = DescriptionView(frame: .zero)) {
         displayDescriptionView = view
         super.init(nibName: nil, bundle: nil)
         displayDescriptionView.setDescription(text: description)

@@ -40,7 +40,7 @@ class DescriptionButtonViewController: UIViewController {
     
     private func present(description: String) {
         DispatchQueue.main.async {
-            self.present(DisplayDescriptionViewController(description: description),
+            self.present(DescriptionViewController(description: description),
                     animated: true,
                     completion: nil)
         }
