@@ -1,4 +1,5 @@
 import UIKit
+import SnapKit
 
 protocol DescriptionViewType: UIView {
     func setDescription(text: String)

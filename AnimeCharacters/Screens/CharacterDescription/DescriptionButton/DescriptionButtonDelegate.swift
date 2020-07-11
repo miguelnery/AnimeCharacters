@@ -1,3 +1,0 @@
-protocol DescriptionButtonDelegate {
-    func 
-}

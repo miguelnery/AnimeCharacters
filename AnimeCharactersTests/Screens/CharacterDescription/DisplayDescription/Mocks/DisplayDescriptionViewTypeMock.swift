@@ -1,7 +1,7 @@
 import UIKit
 @testable import AnimeCharacters
 
-class DisplayDescriptionViewTypeMock: UIView, DisplayDescriptionViewType {
+class DisplayDescriptionViewTypeMock: UIView, DescriptionViewType {
     var receivedText: String?
     
     func setDescription(text: String) {

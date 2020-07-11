@@ -1,10 +1,6 @@
 import UIKit
 import Combine
 
-protocol ButtonViewType: UIView {
-    func publisher(forEvent event: UIControl.Event) -> AnyPublisher<Void, Never>
-}
-
 class ButtonView: UIView {
     private let button = UIButton(frame: .zero)
     
@@ -18,7 +14,7 @@ class ButtonView: UIView {
     }
 }
  
-extension ButtonView: ButtonViewType {
+extension ButtonView: TriggerView {
     func publisher(forEvent event: UIControl.Event) -> AnyPublisher<Void, Never> {
         button.publisher(forEvent: event)
     }

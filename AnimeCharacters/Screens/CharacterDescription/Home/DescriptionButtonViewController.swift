@@ -1,9 +1,10 @@
 import UIKit
 import Combine
 
-class DescriptionButtonViewController: UIViewController {
+class DescriptionHomeViewController: UIViewController {
     private let buttonView: ButtonViewType
     private let decodableFetcher: DecodableFetcher
+//    private unowned let delegate: ButtonScreenDelegate
     private var sub: AnyCancellable?
     
     init(view: ButtonViewType = ButtonView(),

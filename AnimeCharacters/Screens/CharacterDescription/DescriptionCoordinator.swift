@@ -8,14 +8,24 @@ class DescriptionCoordinator: Coordinator {
     }
     
     func start() {
-        displayDescriptionButton()
+        navigateToDescriptionHome()
     }
     
-    private func displayDescriptionButton() {
-        navigationController.pushViewController(DescriptionButtonViewController(), animated: true)
+    private func navigateToDescriptionHome() {
+        DispatchQueue.main.async {
+            self.navigationController.pushViewController(DescriptionHomeViewController(delegate: self), animated: true)
+        }
     }
     
-    private func displayDescription(_ description: String) {
-        navigationController.present(DescriptionViewController(description: description), animated: true, completion: nil)
+    private func navigateToDisplayDescription() {
+        DispatchQueue.main.async {
+            self.navigationController.present(DescriptionViewController(), animated: true, completion: nil)
+        }
+    }
+}
+
+extension DescriptionCoordinator: DescriptionHomeDelegate {
+    func displayDescription() {
+        navigateToDisplayDescription()
     }
 }

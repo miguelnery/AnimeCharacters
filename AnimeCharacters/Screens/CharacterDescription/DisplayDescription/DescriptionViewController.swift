@@ -1,14 +1,17 @@
 import UIKit
-import SnapKit
 import Combine
 
 class DescriptionViewController: UIViewController {
     private let displayDescriptionView: DescriptionViewType
+    private var descriptionSub: AnyCancellable?
     
-    init(description: String, view: DescriptionViewType = DescriptionView(frame: .zero)) {
+    // uau
+    init(view: DescriptionViewType = DescriptionView(frame: .zero),
+         publisher: AnyPublisher<String, FetchError> = DefaultDecodableFetcher().fetchDecodable(from: .getCharacter(traitCount: 3))) {
         displayDescriptionView = view
         super.init(nibName: nil, bundle: nil)
-        displayDescriptionView.setDescription(text: description)
+        
+        descriptionSub = subscribe(to: publisher)
     }
     
     @available(*, unavailable)
@@ -18,5 +21,14 @@ class DescriptionViewController: UIViewController {
     
     override func loadView() {
         view = displayDescriptionView
+    }
+    
+    private func subscribe(to publisher: AnyPublisher<String, FetchError>) -> AnyCancellable {
+        publisher
+            .sink(receiveCompletion: { completion in
+                if case .failure(let error) = completion { print(error) }
+            }, receiveValue: { (description: String) in
+                self.displayDescriptionView.setDescription(text: description)
+            })
     }
 }
